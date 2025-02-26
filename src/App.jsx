@@ -16,16 +16,16 @@ function App() {
 
   return (
     <div className="md:h-[100vh] h-[130vh] w-full flex flex-col justify-center items-center bg-[#ececec] font-semibold ">
-      <div className="flex flex-col justify-center items-center bg-[#101b42] md:w-[45%] md:h-[80%] w-[90%] h-[100vh] p-6 rounded-2xl shadow-xl">
+      <div className="flex flex-col justify-center items-center bg-[#101b42] md:w-[45%] md:h-[80%] w-[90%] h-[100vh] p-6 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.2)]">
         {on ? (
           <Task tasks={tasks} setTasks={setTasks} handleCancel={handleCancel} />
         ) : (
           <To_do_list handleClick={handleClick} />
         )}
-        <div className="flex justify-between items-center w-full mt-4">
-          <span className="text-[#c8dceb] font-bold">Filter by month</span>
+        <div className="flex justify-between items-center w-full mt-4 ">
+          <span className="text-[#c8dceb] font-bold ">Filter by month</span>
           <select 
-            className="bg-white text-black md:px-3 px-2 py-1 md:w-[12%] w-[25%] rounded-lg font-semibold md:text-base text-xs" 
+            className="bg-white text-black md:px-3 px-2 py-1 md:w-[12%] w-[25%] rounded-lg font-semibold md:text-base text-xs " 
             onChange={(e) => setFilter(e.target.value)}
             value={filter}
           >
